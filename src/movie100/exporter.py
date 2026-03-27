@@ -14,7 +14,7 @@ from movie100.scraper import Movie
 def make_filename(year: int, count: int, ext: str) -> str:
     """파일명 생성: YYYYMMDD_HHMMSS.년도.카운트.ext"""
     now = datetime.now().strftime("%Y%m%d_%H%M%S")
-    return f"{now}.{year}.{count}.{ext}"
+    return f"{year}.{count}.{now}.{ext}"
 
 
 def export_csv(movies: list[Movie], year: int, count: int, output_dir: Path) -> Path:
