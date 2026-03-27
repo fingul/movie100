@@ -1,0 +1,28 @@
+[project]
+name = "movie100"
+version = "0.1.0"
+description = "각 년도별 Best 100 영화를 조회하는 CLI"
+readme = "README.md"
+authors = [
+    { name = "fingul", email = "fingul@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.15",
+    "loguru>=0.7",
+    "httpx>=0.28",
+    "rich>=13",
+]
+
+[project.scripts]
+movie100 = "movie100.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.8.13,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.9",
+]
